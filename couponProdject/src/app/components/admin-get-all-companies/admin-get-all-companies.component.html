@@ -1,0 +1,23 @@
+<section>
+  <br>
+  <div *ngIf="done">
+    <table>
+      <thead>
+        <tr>
+          <th>Id</th>
+          <th>Name</th>
+          <th>Password</th>
+          <th>Email</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let company of companies">
+          <td>{{company.id}}</td>
+          <td>{{company.compName}}</td>
+          <td>{{company.password}}</td>
+          <td>{{company.email}}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>

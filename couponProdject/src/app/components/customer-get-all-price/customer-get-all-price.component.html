@@ -1,0 +1,44 @@
+<div class="div">show coupons by price</div>
+<div class="example-container">
+  <mat-form-field>
+    <textarea matInput required placeholder="enter price (will show coupons up to this price)" [(ngModel)]="price"
+      [formControl]="form.get('price')">{{price}}</textarea>
+  </mat-form-field>
+  <br>
+  <div>
+    <button mat-raised-button (click)="click()" [disabled]="form.invalid">show coupons</button>
+  </div>
+</div>
+<br>
+<div *ngIf="done">
+  <section>
+    <table>
+      <thead>
+        <tr>
+          <th>Id</th>
+          <th>Title</th>
+          <th>Start Date</th>
+          <th>Final Date</th>
+          <th>Amount</th>
+          <th>Coupon Type</th>
+          <th>Message</th>
+          <th>Price</th>
+          <th>Image</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let coupon of coupons">
+          <td>{{ coupon.id }}</td>
+          <td>{{ coupon.title }}</td>
+          <td>{{ coupon.startDate| date:'d/M/yy' }}</td>
+          <td>{{ coupon.endDate| date:'d/M/yy' }}</td>
+          <td>{{ coupon.amount }}</td>
+          <td>{{ coupon.couponType }}</td>
+          <td>{{ coupon.message }}</td>
+          <td>{{ coupon.price }}</td>
+          <td><img src="{{ coupon.image }}"></td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+</div>

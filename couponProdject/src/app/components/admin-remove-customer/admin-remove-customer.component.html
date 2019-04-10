@@ -1,0 +1,10 @@
+<div class="div">remove customer</div>
+<section>
+  <mat-form-field>
+    <textarea matInput placeholder="enter id"  [(ngModel)]="id" [formControl]="form.get('id')">{{id}}</textarea>
+  </mat-form-field>
+ <br>
+  <div>
+    <button mat-raised-button (click)="click()" [disabled]="form.invalid">remove</button>
+  </div>
+</section>

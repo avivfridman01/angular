@@ -1,0 +1,31 @@
+<div class="div">show company</div>
+<div class="example-container">
+  <mat-form-field>
+    <textarea matInput placeholder="enter id" [(ngModel)]="id" [formControl]="form.get('id')">{{id}}</textarea>
+  </mat-form-field>
+  <br>
+  <div>
+    <button mat-raised-button (click)="click()" [disabled]="form.invalid">show</button>
+  </div>
+<br>
+<div *ngIf="done">
+  <table>
+    <thead>
+      <tr>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Password</th>
+        <th>Email</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>{{company.id}}</td>
+        <td>{{company.compName}}</td>
+        <td>{{company.password}}</td>
+        <td>{{company.email}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+

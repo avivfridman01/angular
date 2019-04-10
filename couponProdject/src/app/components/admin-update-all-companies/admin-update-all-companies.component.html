@@ -1,0 +1,23 @@
+<section>
+  <br>
+    <table>
+      <thead>
+        <tr>
+          <th>Id</th>
+          <th>Name</th>
+          <th>Password</th>
+          <th>Email</th>
+          <th>Update</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let company of companies">
+          <td>{{company.id}}</td>
+          <td>{{company.compName}}</td>
+          <td>{{company.password}}</td>
+          <td>{{company.email}}</td>
+          <td><button routerLink="/admin/updateCompany/{{company.id}}">update</button></td>
+        </tr>
+      </tbody>
+    </table>
+</section>

@@ -1,0 +1,11 @@
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+
+
+html, body { /* Take the entire page */
+    height: 100%;
+    padding: 0;
+    margin: 0;
+}
+.div{
+    font-size: 150%;
+}

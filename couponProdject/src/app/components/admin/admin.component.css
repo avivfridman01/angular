@@ -1,0 +1,34 @@
+section {
+    height: 100%;
+    border: 1px solid white;
+    background-color: rgb(204, 247, 247);
+    text-align: center;
+    box-sizing: border-box; /* Width + Height includes the border */
+    display: grid;
+    grid-template-rows: 11% 82% 7%; /* 3 rows */
+    grid-template-columns: repeat(12, 1fr); /* 12 columns */
+}
+
+header, footer {
+    grid-column: span 12; /* take 12 columns */
+    background: rgb(202, 205, 206);
+}
+
+aside {
+    grid-column: span 2; /* take 2 columns */
+    background: rgb(150, 146, 146);
+}
+
+main {
+    grid-column: span 10; /* take 10 columns */
+    background: rgb(233, 230, 230);
+}
+
+section > * {
+    border: 1px solid white;
+}
+h1 {
+    color: rgb(49, 48, 48);
+    font-size: 250%; 
+    margin: 0;
+}

@@ -1,0 +1,24 @@
+.btn-group .button {
+    /* margin: 100%; */
+    background-color: rgb(141, 141, 141); 
+    border: 1px solid rgb(255, 255, 255);
+    color: white;
+    padding: 21px 26px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 20px;
+    cursor: pointer;
+    width: 255px; 
+    display: block;
+    text-decoration: none;
+  }
+  
+  .btn-group .button:not(:last-child) {
+    border-bottom: none; 
+  }
+  
+  .btn-group .button:hover {
+    background-color: rgb(120, 164, 170);
+  }
+  

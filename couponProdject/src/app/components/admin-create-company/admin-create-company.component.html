@@ -1,0 +1,19 @@
+<div class="div">create company</div>
+<section>
+  <mat-form-field>
+    <textarea matInput placeholder="enter id"  [(ngModel)]="company.id" [formControl]="form.get('id')">{{company.id}}</textarea>
+  </mat-form-field>
+  <mat-form-field>
+    <textarea matInput placeholder="enter name" [(ngModel)]="company.compName" [formControl]="form.get('compName')">{{company.compName}}</textarea>
+  </mat-form-field>
+  <mat-form-field>
+    <textarea matInput placeholder="enter password"  [(ngModel)]="company.password" [formControl]="form.get('password')">{{company.password}}</textarea>
+  </mat-form-field>
+  <mat-form-field>
+    <textarea matInput placeholder="enter email"  [(ngModel)]="company.email" [formControl]="form.get('email')">{company.email}}</textarea>
+  </mat-form-field>
+ <br>
+  <div>
+    <button mat-raised-button (click)="click()" [disabled]="form.invalid">create</button>
+  </div>
+</section>

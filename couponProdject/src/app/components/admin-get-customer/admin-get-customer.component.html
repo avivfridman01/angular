@@ -1,0 +1,29 @@
+<div class="div">show customer</div>
+<div class="example-container">
+  <mat-form-field>
+    <textarea matInput placeholder="enter id" [(ngModel)]="id" [formControl]="form.get('id')">{{id}}</textarea>
+  </mat-form-field>
+  <br>
+  <div>
+    <button mat-raised-button (click)="click()" [disabled]="form.invalid">show</button>
+  </div>
+<br>
+<div *ngIf="done">
+  <table>
+    <thead>
+      <tr>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Password</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>{{customer.id}}</td>
+        <td>{{customer.custName}}</td>
+        <td>{{customer.password}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+

@@ -1,0 +1,19 @@
+
+
+  .example-selected-value {
+    margin: 15px 0;
+  }
+  
+div{
+  color: blue
+}
+mat-form-field{
+  width: 100%
+}
+section{
+  height: 90%;
+  overflow: auto;
+}
+#pic{
+  color: blue
+}

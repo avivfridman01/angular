@@ -1,0 +1,23 @@
+<h1 class="animated fadeInLeft">Welcome To Coupon System</h1>
+<div class="example-container">
+  <mat-form-field>
+    <textarea matInput required placeholder="enter name"  [(ngModel)]="loginObj.name">{{loginObj.name}}</textarea>
+  </mat-form-field>
+  <mat-form-field>
+    <textarea matInput required placeholder="enter password"  [(ngModel)]="loginObj.password" >{{loginObj.password}}</textarea>
+  </mat-form-field>
+  <mat-form-field>
+      <mat-select placeholder="Select Type" [(ngModel)]="loginObj.clientType">
+        <mat-option value="ADMIN">Admin</mat-option>
+        <mat-option value="COMPANY">Company</mat-option>
+        <mat-option value="CUSTOMER">Customer</mat-option>
+      </mat-select>
+    </mat-form-field>
+    <br>
+  <div>
+    <button mat-raised-button color="primary" (click)="click()">login</button>
+  </div>
+ 
+
+
+  

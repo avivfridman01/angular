@@ -1,0 +1,35 @@
+.example-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.example-container > * {
+  width: 100%;
+}
+
+.example-selected-value {
+  margin: 15px 0;
+}
+div{
+  color: blue
+}
+
+table {
+margin: auto;
+}
+
+table, th, td {
+border: 2px solid  rgb(141, 141, 141);
+font-size: large;
+}
+td{
+color: black
+}
+img{
+width:2cm;
+height:2cm
+}
+section{
+height: 90%;
+overflow: auto;
+}

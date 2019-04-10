@@ -1,0 +1,13 @@
+<div class="div">update customer
+  <span style="color: red">(you can only change password)</span>
+</div>
+<section>
+  <mat-form-field>
+    <textarea matInput placeholder="enter password" [(ngModel)]="customer.password"
+      [formControl]="form.get('password')"></textarea>
+  </mat-form-field>
+  <br>
+  <div>
+    <button mat-raised-button (click)="click()" [disabled]="form.invalid">update</button>
+  </div>
+</section>

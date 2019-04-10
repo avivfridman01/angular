@@ -1,0 +1,60 @@
+<div class="div">create coupon</div>
+<section>
+  <mat-form-field>
+    <textarea matInput placeholder="enter id" [(ngModel)]="coupon.id"
+      [formControl]="form.get('id')"></textarea>
+  </mat-form-field>
+  <mat-form-field>
+    <textarea matInput placeholder="enter title" [(ngModel)]="coupon.title"
+      [formControl]="form.get('title')"></textarea>
+  </mat-form-field>
+  <mat-form-field>
+    <textarea matInput placeholder="enter start date (yyyy-mm-dd)" [(ngModel)]="coupon.startDate"
+      [formControl]="form.get('start')"></textarea>
+  </mat-form-field>
+  <mat-form-field>
+    <textarea matInput placeholder="enter final date (yyyy-mm-dd)" [(ngModel)]="coupon.endDate"
+      [formControl]="form.get('final')"></textarea>
+  </mat-form-field>
+  <mat-form-field>
+    <textarea matInput placeholder="enter amount" [(ngModel)]="coupon.amount"
+      [formControl]="form.get('amount')"></textarea>
+  </mat-form-field>
+  <mat-form-field>
+    <mat-select placeholder="select type" [(ngModel)]="coupon.couponType" [formControl]="form.get('type')">
+      <mat-option value="RESTURANTS">Resturants</mat-option>
+      <mat-option value="ELECTRICITY">Electricity</mat-option>
+      <mat-option value="FOOD">Food</mat-option>
+      <mat-option value="HEALTH">Health</mat-option>
+      <mat-option value="SPORTS">Sports</mat-option>
+      <mat-option value="CAMPING">Camping</mat-option>
+      <mat-option value="TRAVELLING">Travelling</mat-option>
+      <mat-option value="SPA">Spa</mat-option>
+      <mat-option value="ATTRACTIONS">Attractions</mat-option>
+      <mat-option value="ENTERTAINMENT">Entretainment</mat-option>
+    </mat-select>
+  </mat-form-field>
+  <mat-form-field>
+    <textarea matInput placeholder="enter message" [(ngModel)]="coupon.message"
+      [formControl]="form.get('message')"></textarea>
+  </mat-form-field>
+  <mat-form-field>
+    <textarea matInput placeholder="enter price" [(ngModel)]="coupon.price"
+      [formControl]="form.get('price')"></textarea>
+  </mat-form-field>
+  <mat-form-field>
+    <textarea matInput placeholder="enter image (url)" [(ngModel)]="coupon.image"
+      [formControl]="form.get('image')"></textarea>
+  </mat-form-field>
+  <!-- option to upload file: <br>
+  <div id="pic">
+    <label for="img">choose image: </label>
+    <input type="file" (change)="uploadImage($event)" accept="jpg" id="img" [formControl]="form.get('image')" name="file">
+    <form action=""></form>
+    <br>
+  </div> -->
+  <br>
+  <div>
+    <button mat-raised-button (click)="click()" [disabled]="form.invalid">create</button>
+  </div>
+</section>

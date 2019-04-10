@@ -1,0 +1,16 @@
+<div class="div">create customer</div>
+<section>
+  <mat-form-field>
+    <textarea matInput placeholder="enter id"  [(ngModel)]="customer.id" [formControl]="form.get('id')">{{customer.id}}</textarea>
+  </mat-form-field>
+  <mat-form-field>
+    <textarea matInput placeholder="enter name" [(ngModel)]="customer.custName" [formControl]="form.get('custName')">{{customer.custName}}</textarea>
+  </mat-form-field>
+  <mat-form-field>
+    <textarea matInput placeholder="enter password"  [(ngModel)]="customer.password" [formControl]="form.get('password')">{{customer.password}}</textarea>
+  </mat-form-field>
+ <br>
+  <div>
+    <button mat-raised-button (click)="click()" [disabled]="form.invalid">create</button>
+  </div>
+</section>
